@@ -1,6 +1,7 @@
 name: Test Safe Transaction Proposer
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       transaction-target-address:
