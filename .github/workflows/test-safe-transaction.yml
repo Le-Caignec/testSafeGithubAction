@@ -21,6 +21,9 @@ on:
 jobs:
   test-safe-transaction:
     uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/safe-transaction.yml@feature/add-safe-transaction-reusable-workflow
+    secrets:
+      proposer-private-key: ${{ secrets.PROPOSER_PRIVATE_KEY }}
+      safe-api-key: ${{ secrets.SAFE_API_KEY }}
     with:
       rpc-url: ${{ vars.RPC_URL }}
       safe-address: ${{ vars.SAFE_ADDRESS }}
@@ -28,6 +31,3 @@ jobs:
       transaction-target-address: ${{ inputs.transaction-target-address }}
       transaction-value: ${{ inputs.transaction-value }}
       transaction-data: ${{ inputs.transaction-data }}
-    secrets:
-      proposer-private-key: ${{ secrets.PROPOSER_PRIVATE_KEY }}
-      safe-api-key: ${{ secrets.SAFE_API_KEY }}
