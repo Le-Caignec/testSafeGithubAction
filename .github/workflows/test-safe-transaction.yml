@@ -26,6 +26,7 @@ jobs:
       safe-api-key: ${{ secrets.SAFE_API_KEY }}
     with:
       rpc-url: ${{ vars.RPC_URL }}
+      chain-id: ${{ vars.CHAIN_ID }}
       safe-address: ${{ vars.SAFE_ADDRESS }}
       transaction-target-address: ${{ inputs.transaction-target-address }}
       transaction-value: ${{ inputs.transaction-value }}
