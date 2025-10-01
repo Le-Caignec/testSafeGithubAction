@@ -27,7 +27,6 @@ jobs:
     with:
       rpc-url: ${{ vars.RPC_URL }}
       safe-address: ${{ vars.SAFE_ADDRESS }}
-      chain-id: ${{ vars.CHAIN_ID }}
       transaction-target-address: ${{ inputs.transaction-target-address }}
       transaction-value: ${{ inputs.transaction-value }}
       transaction-data: ${{ inputs.transaction-data }}
